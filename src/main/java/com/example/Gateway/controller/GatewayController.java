@@ -21,11 +21,11 @@ public class GatewayController {
 
     @GetMapping("/gateway/IAM")
     public String getIAMResponse() {
-        return restTemplate.getForObject("http://localhost:8080/IAM", String.class);
+        return restTemplate.getForObject("http://192.168.30.67:8091/IAM", String.class);
     }
 
     @GetMapping("/gateway/rendering")
     public String getRenderingResponse() {
-        return restTemplate.getForObject("http://localhost:8081/rendering", String.class);
+        return restTemplate.getForObject("http://192.168.30.67:8092/rendering", String.class);
     }
 }
